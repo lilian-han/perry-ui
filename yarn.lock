@@ -492,7 +492,7 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chokidar@^3.3.1:
+"chokidar@>=2.0.0 <4.0.0", chokidar@^3.3.1:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.2.tgz#38dc8e658dec3809741eb3ef7bb0a47fe424232d"
   integrity sha512-IZHaDeBeI+sZJRX7lGcXsdzgvZqKv6sECqsbErJA4mHWfpRrD8B97kSFN4cQz6nGBGiuFia1MKR4d6c1o8Cv7A==
@@ -1774,6 +1774,13 @@ safe-buffer@^5.1.0:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
 
+sass@1.26.10:
+  version "1.26.10"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.26.10.tgz#851d126021cdc93decbf201d1eca2a20ee434760"
+  integrity sha512-bzN0uvmzfsTvjz0qwccN1sPm2HxxpNI/Xa+7PlUEMS+nQvbyuEK7Y0qFqxlPHhiNHb1Ze8WQJtU31olMObkAMw==
+  dependencies:
+    chokidar ">=2.0.0 <4.0.0"
+
 selfsigned@^1.10.7:
   version "1.10.7"
   resolved "https://registry.yarnpkg.com/selfsigned/-/selfsigned-1.10.7.tgz#da5819fd049d5574f28e88a9bcc6dbc6e6f3906b"
@@ -2015,6 +2022,11 @@ vite@^1.0.0-rc.1:
     vue "^3.0.0-rc.5"
     ws "^7.2.3"
 
+vue-router@4.0.0-beta.3:
+  version "4.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.0-beta.3.tgz#e46f45807023a4b8ce73a143a216b4c9ea3eb243"
+  integrity sha512-3/cg3n46D9MO9u2nvtGE38gMyUxg8sjt6jMeZ6zbi9sRGAL0PaDHuKS+xWlOOLit7abP5MepNlh84t41gxtP8Q==
+
 vue@^3.0.0-rc.1, vue@^3.0.0-rc.5:
   version "3.0.0-rc.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.0.0-rc.10.tgz#31298a757b4fad6ee8973d0fa27c4fde8574bd01"
@@ -2023,6 +2035,11 @@ vue@^3.0.0-rc.1, vue@^3.0.0-rc.5:
     "@vue/compiler-dom" "3.0.0-rc.10"
     "@vue/runtime-dom" "3.0.0-rc.10"
     "@vue/shared" "3.0.0-rc.10"
+
+vuex@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.5.1.tgz#f1b8dcea649bc25254cf4f4358081dbf5da18b3d"
+  integrity sha512-w7oJzmHQs0FM9LXodfskhw9wgKBiaB+totOdb8sNzbTB2KDCEEwEs29NzBZFh/lmEK1t5tDmM1vtsO7ubG1DFw==
 
 wcwidth@^1.0.1:
   version "1.0.1"
