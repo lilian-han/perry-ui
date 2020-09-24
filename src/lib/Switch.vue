@@ -1,5 +1,7 @@
 <template>
-<button :class="{ checked: value }" @click="toggle"><span></span></button>
+<button class="aha-switch" :class="{ 'aha-checked': value }" @click="toggle">
+  <span></span>
+</button>
 </template>
 
 <script lang="ts">
@@ -22,11 +24,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
 
-button {
+.aha-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -45,7 +47,7 @@ button {
     transition: 0.25s;
   }
 
-  &.checked {
+  &.aha-checked {
     background: #1890ff;
 
     >span {
@@ -63,7 +65,7 @@ button {
     }
   }
 
-  &.checked:active {
+  &.aha-checked:active {
     >span {
       width: $h2 + 4px;
       margin-left: -4px;
