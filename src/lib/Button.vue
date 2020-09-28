@@ -1,14 +1,12 @@
 <template>
-<button class="aha-button" :class="classes" :disabled="disabled">
-  <span class="aha-loadingIndicator" v-if="loading"></span>
-  <slot />
-</button>
+  <button class="aha-button" :class="classes" :disabled="disabled">
+    <span class="aha-loadingIndicator" v-if="loading"></span>
+    <slot />
+  </button>
 </template>
 
 <script lang="ts">
-import {
-  computed
-} from 'vue'
+import { computed } from 'vue'
 export default {
   props: {
     theme: {
@@ -34,12 +32,7 @@ export default {
   },
 
   setup(props) {
-    console.log(props.disabled)
-    const {
-      theme,
-      size,
-      level
-    } = props
+    const { theme, size, level } = props
     const classes = computed(() => {
       return {
         [`aha-theme-${theme}`]: theme,
@@ -79,7 +72,7 @@ $grey: grey;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: 0.25s;
 
-  &+& {
+  & + & {
     margin-left: 8px;
   }
 
@@ -207,7 +200,7 @@ $grey: grey;
     }
   }
 
-  >.aha-loadingIndicator {
+  > .aha-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;

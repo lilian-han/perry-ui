@@ -1,20 +1,17 @@
 <template>
-<button class="aha-switch" :class="{ 'aha-checked': value }" @click="toggle">
-  <span></span>
-</button>
+  <button class="aha-switch" :class="{ 'aha-checked': value }" @click="toggle">
+    <span></span>
+  </button>
 </template>
 
 <script lang="ts">
-import {
-  ref
-} from 'vue'
+import { ref } from 'vue'
 export default {
   props: {
     value: Boolean,
   },
   setup(props, context) {
     const toggle = () => {
-      console.log(!props.value)
       context.emit('update:value', !props.value)
     }
     return {
@@ -36,7 +33,7 @@ $h2: $h - 4px;
   border-radius: $h/2;
   position: relative;
 
-  >span {
+  > span {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -50,7 +47,7 @@ $h2: $h - 4px;
   &.aha-checked {
     background: #1890ff;
 
-    >span {
+    > span {
       left: calc(100% - #{$h2} - 2px);
     }
   }
@@ -60,13 +57,13 @@ $h2: $h - 4px;
   }
 
   &:active {
-    >span {
+    > span {
       width: $h2 + 4px;
     }
   }
 
   &.aha-checked:active {
-    >span {
+    > span {
       width: $h2 + 4px;
       margin-left: -4px;
     }

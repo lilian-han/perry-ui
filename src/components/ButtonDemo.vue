@@ -61,9 +61,7 @@ export default {
     Button,
   },
   setup() {
-    const onClick = () => {
-      console.log('hi')
-    }
+    const onClick = () => {}
     return {
       onClick,
     }
