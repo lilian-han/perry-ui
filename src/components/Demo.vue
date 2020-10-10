@@ -5,7 +5,8 @@
     <component :is="component" />
   </div>
   <div class="demo-actions">
-    <Button @click="codeVisible = !codeVisible">查看代码</Button>
+    <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
+    <Button @click="showCode" v-else>查看代码</Button>
   </div>
   <div class="demo-code" v-if="codeVisible">
     <pre class="language-css" v-html="html" />
@@ -37,9 +38,17 @@ export default {
       )
     })
     const codeVisible = ref(false)
+    const hideCode = () => {
+      codeVisible.value = false
+    }
+    const showCode = () => {
+      codeVisible.value = true
+    }
     return {
       html,
       codeVisible,
+      hideCode,
+      showCode,
     }
   },
 }
