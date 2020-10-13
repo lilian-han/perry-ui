@@ -1,6 +1,6 @@
 <template>
-  <button class="aha-button" :class="classes" :disabled="disabled">
-    <span class="aha-loadingIndicator" v-if="loading"></span>
+  <button class="pear-button" :class="classes" :disabled="disabled">
+    <span class="pear-loadingIndicator" v-if="loading"></span>
     <slot />
   </button>
 </template>
@@ -35,9 +35,9 @@ export default {
     const { theme, size, level } = props
     const classes = computed(() => {
       return {
-        [`aha-theme-${theme}`]: theme,
-        [`aha-size-${size}`]: size,
-        [`aha-level-${level}`]: level,
+        [`pear-theme-${theme}`]: theme,
+        [`pear-size-${size}`]: size,
+        [`pear-level-${level}`]: level,
       }
     })
     return {
@@ -56,7 +56,7 @@ $radius: 4px;
 $red: red;
 $grey: grey;
 
-.aha-button {
+.pear-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -90,7 +90,7 @@ $grey: grey;
     border: 0;
   }
 
-  &.aha-theme-link {
+  &.pear-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -101,7 +101,7 @@ $grey: grey;
     }
   }
 
-  &.aha-theme-text {
+  &.pear-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -112,20 +112,20 @@ $grey: grey;
     }
   }
 
-  &.aha-size-big {
+  &.pear-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
 
-  &.aha-size-small {
+  &.pear-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
 
-  &.aha-theme-button {
-    &.aha-level-main {
+  &.pear-theme-button {
+    &.pear-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -137,7 +137,7 @@ $grey: grey;
       }
     }
 
-    &.aha-level-danger {
+    &.pear-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -150,8 +150,8 @@ $grey: grey;
     }
   }
 
-  &.aha-theme-link {
-    &.aha-level-danger {
+  &.pear-theme-link {
+    &.pear-level-danger {
       color: $red;
 
       &:hover,
@@ -161,8 +161,8 @@ $grey: grey;
     }
   }
 
-  &.aha-theme-text {
-    &.aha-level-main {
+  &.pear-theme-text {
+    &.pear-level-main {
       color: $blue;
 
       &:hover,
@@ -171,7 +171,7 @@ $grey: grey;
       }
     }
 
-    &.aha-level-danger {
+    &.pear-level-danger {
       color: $red;
 
       &:hover,
@@ -181,7 +181,7 @@ $grey: grey;
     }
   }
 
-  &.aha-theme-button {
+  &.pear-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -192,15 +192,15 @@ $grey: grey;
     }
   }
 
-  &.aha-theme-link,
-  &.aha-theme-text {
+  &.pear-theme-link,
+  &.pear-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
 
-  > .aha-loadingIndicator {
+  > .pear-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -209,10 +209,10 @@ $grey: grey;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: aha-spin 1s infinite linear;
+    animation: pear-spin 1s infinite linear;
   }
 
-  @keyframes aha-spin {
+  @keyframes pear-spin {
     0% {
       transform: rotate(0deg);
     }

@@ -1,23 +1,24 @@
 <template>
-<template v-if="visible">
-  <Teleport to="body">
-    <div class="aha-dialog-overlay" @click="onClickOverlay"></div>
-    <div class="aha-dialog-wrapper">
-      <div class="aha-dialog">
-        <header>
-          <slot name="title"></slot><span @click="close" class="aha-dialog-close"></span>
-        </header>
-        <main>
-          <slot name="content"></slot>
-        </main>
-        <footer>
-          <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+  <template v-if="visible">
+    <Teleport to="body">
+      <div class="pear-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="pear-dialog-wrapper">
+        <div class="pear-dialog">
+          <header>
+            <slot name="title"></slot
+            ><span @click="close" class="pear-dialog-close"></span>
+          </header>
+          <main>
+            <slot name="content"></slot>
+          </main>
+          <footer>
+            <Button level="main" @click="ok">OK</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
-  </Teleport>
-</template>
+    </Teleport>
+  </template>
 </template>
 
 <script lang="ts">
@@ -75,7 +76,7 @@ export default {
 $radius: 4px;
 $border-color: #d9d9d9;
 
-.aha-dialog {
+.pear-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);
@@ -100,7 +101,7 @@ $border-color: #d9d9d9;
     z-index: 11;
   }
 
-  >header {
+  > header {
     padding: 12px 16px;
     border-bottom: 1px solid $border-color;
     display: flex;
@@ -109,11 +110,11 @@ $border-color: #d9d9d9;
     font-size: 20px;
   }
 
-  >main {
+  > main {
     padding: 12px 16px;
   }
 
-  >footer {
+  > footer {
     border-top: 1px solid $border-color;
     padding: 12px 16px;
     text-align: right;

@@ -1,27 +1,26 @@
 <template>
-  <div class="topnav">
-    <router-link to="/" class="logo">
-      <svg class="icon">
-        <use xlink:href="#icon-pear"></use>
-      </svg>
-    </router-link>
-    <ul class="menu">
-      <li>
-        <router-link to="/doc">文档</router-link>
-      </li>
-    </ul>
-    <svg
-      v-if="toggleMenuButtonVisible"
-      class="toggleAside"
-      @click="toggleAside"
-    >
-      <use xlink:href="#icon-menu"></use>
+<div class="topnav">
+  <router-link to="/" class="logo">
+    <svg class="icon">
+      <use xlink:href="#icon-pear"></use>
     </svg>
-  </div>
+  </router-link>
+  <ul class="menu">
+    <li>
+      <router-link to="/doc">文档</router-link>
+    </li>
+  </ul>
+  <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleAside">
+    <use xlink:href="#icon-menu"></use>
+  </svg>
+</div>
 </template>
 
 <script lang="ts">
-import { inject, Ref } from 'vue'
+import {
+  inject,
+  Ref
+} from 'vue'
 export default {
   props: {
     toggleMenuButtonVisible: {
@@ -30,7 +29,7 @@ export default {
     },
   },
   setup() {
-    const asideVisible = inject<Ref<boolean>>('asideVisible')
+    const asideVisible = inject < Ref < boolean >> ('asideVisible')
     const toggleAside = () => {
       asideVisible.value = !asideVisible.value
     }
@@ -42,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #007974;
+$color: #2d2438;
 
 .topnav {
   color: $color;
@@ -57,27 +56,27 @@ $color: #007974;
   align-items: center;
   height: 54px;
 
-  > .logo {
+  >.logo {
     max-width: 6em;
     margin-right: auto;
 
-    > svg {
+    >svg {
       width: 32px;
       height: 32px;
     }
   }
 
-  > .menu {
+  >.menu {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
 
-    > li {
+    >li {
       margin: 0 1em;
     }
   }
 
-  > .toggleAside {
+  >.toggleAside {
     display: none;
     width: 24px;
     height: 24px;
@@ -88,15 +87,15 @@ $color: #007974;
   }
 
   @media (max-width: 500px) {
-    > .menu {
+    >.menu {
       display: none;
     }
 
-    > .logo {
+    >.logo {
       margin: 0 auto;
     }
 
-    > .toggleAside {
+    >.toggleAside {
       display: inline-block;
     }
   }

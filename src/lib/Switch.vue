@@ -1,5 +1,9 @@
 <template>
-  <button class="aha-switch" :class="{ 'aha-checked': value }" @click="toggle">
+  <button
+    class="pear-switch"
+    :class="{ 'pear-checked': value }"
+    @click="toggle"
+  >
     <span></span>
   </button>
 </template>
@@ -25,12 +29,13 @@ export default {
 $h: 22px;
 $h2: $h - 4px;
 
-.aha-switch {
+.pear-switch {
   height: $h;
   width: $h * 2;
   border: none;
   background: #bfbfbf;
   border-radius: $h/2;
+  cursor: pointer;
   position: relative;
 
   > span {
@@ -44,7 +49,7 @@ $h2: $h - 4px;
     transition: 0.25s;
   }
 
-  &.aha-checked {
+  &.pear-checked {
     background: #1890ff;
 
     > span {
@@ -62,7 +67,7 @@ $h2: $h - 4px;
     }
   }
 
-  &.aha-checked:active {
+  &.pear-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;

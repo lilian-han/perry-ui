@@ -3,13 +3,13 @@
 打开终端运行下列命令：
 
 ```
-npm install aha-ui
+npm install pear-ui
 ```
 
 或
 
 ```
-yarn add aha-ui
+yarn add pear-ui
 ```
 
 下一节：[开始使用](#/doc/get-started)

@@ -1,28 +1,34 @@
 <template>
-<div class="aha-tabs">
-  <div class="aha-tabs-nav" ref="container">
-    <div class="aha-tabs-nav-item" :ref="
+  <div class="pear-tabs">
+    <div class="pear-tabs-nav" ref="container">
+      <div
+        class="pear-tabs-nav-item"
+        :ref="
           (el) => {
             if (t === selected) selectedItem = el
           }
-        " @click="select(t)" :class="{ selected: t === selected }" v-for="(t, index) in titles" :key="index">
-      {{ t }}
+        "
+        @click="select(t)"
+        :class="{ selected: t === selected }"
+        v-for="(t, index) in titles"
+        :key="index"
+      >
+        {{ t }}
+      </div>
+      <div class="pear-tabs-nav-indicator" ref="indicator"></div>
     </div>
-    <div class="aha-tabs-nav-indicator" ref="indicator"></div>
+    <div class="pear-tabs-content">
+      <component
+        class="pear-tabs-content-item"
+        :is="current"
+        :key="current.props.title"
+      />
+    </div>
   </div>
-  <div class="aha-tabs-content">
-    <component class="aha-tabs-content-item" :is="current" :key="current.props.title" />
-  </div>
-</div>
 </template>
 
 <script lang="ts">
-import {
-  computed,
-  onMounted,
-  ref,
-  watchEffect
-} from 'vue'
+import { computed, onMounted, ref, watchEffect } from 'vue'
 import Tab from './Tab.vue'
 export default {
   props: {
@@ -31,28 +37,23 @@ export default {
     },
   },
   setup(props, context) {
-    const selectedItem = ref < HTMLDivElement > (null)
-    const indicator = ref < HTMLDivElement > (null)
-    const container = ref < HTMLDivElement > (null)
+    const selectedItem = ref<HTMLDivElement>(null)
+    const indicator = ref<HTMLDivElement>(null)
+    const container = ref<HTMLDivElement>(null)
     onMounted(() => {
       watchEffect(() => {
-        const {
-          width
-        } = selectedItem.value.getBoundingClientRect()
+        const { width } = selectedItem.value.getBoundingClientRect()
         indicator.value.style.width = width + 'px'
-        const {
-          left: left1
-        } = container.value.getBoundingClientRect()
-        const {
-          left: left2
-        } = selectedItem.value.getBoundingClientRect()
+        const { left: left1 } = container.value.getBoundingClientRect()
+        const { left: left2 } = selectedItem.value.getBoundingClientRect()
         const left = left2 - left1
         indicator.value.style.left = left + 'px'
       })
     })
     const defaults = context.slots.default()
     defaults.forEach((tag) => {
-      if (tag.type !== Tab) {
+      // @ts-ignore
+      if (tag.type.name !== Tab.name) {
         throw new Error('Tabs 子标签必须是 Tab')
       }
     })
@@ -85,7 +86,7 @@ $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
 
-.aha-tabs {
+.pear-tabs {
   &-nav {
     display: flex;
     color: $color;
