@@ -24,3 +24,7 @@ export default {
   },
 }
 </script>
+
+<style>
+@import 'perry-ui/dist/lib/perry.css';
+</style>

@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <h1>Button 示例</h1>
-    <Demo :component="Button1Demo" />
-    <Demo :component="Button2Demo" />
-    <Demo :component="Button3Demo" />
-    <Demo :component="Button4Demo" />
-    <Demo :component="Button5Demo" />
-  </div>
+<div>
+  <h1>Button 示例</h1>
+  <Demo :component="Button1Demo" />
+  <Demo :component="Button2Demo" />
+  <Demo :component="Button3Demo" />
+  <Demo :component="Button4Demo" />
+  <Demo :component="Button5Demo" />
+  <span>下一节：</span>
+  <router-link to="/doc/dialog" style="color: #0366d6">Dialog 组件</router-link>
+</div>
 </template>
 
 <script lang="ts">

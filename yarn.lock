@@ -2335,10 +2335,10 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
-perry-ui@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/perry-ui/-/perry-ui-0.0.3.tgz#336054217616886ebd35c239c2f9ebaf3a48f86e"
-  integrity sha512-Y4R6+/mSJU3nVQ/CLMTowx25J66wsgAWwwoDzEXCSgXw1lS3dh+xy/XcC2lc3nJa/4dmDK183+Gg5FazRVbBQw==
+perry-ui@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/perry-ui/-/perry-ui-0.0.7.tgz#3cd21dac24b15d40725a37be11f1448eee164504"
+  integrity sha512-TNoFs1EV9cF3vQbPxYaVWbbKfySdYn8IY9geT/FyxFPM062ocU8TDuFbb0C6aqiaG8L0JGXu52AH0poT7pkyqQ==
   dependencies:
     github-markdown-css "^4.0.0"
     marked "^1.2.0"

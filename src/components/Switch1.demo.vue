@@ -2,12 +2,16 @@
 常规用法
 </demo>
 <template>
-  <Switch v-model:value="bool" />
+<Switch v-model:value="bool" />
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
-import Switch from '../lib/Switch.vue'
+import {
+  ref
+} from 'vue'
+import {
+  Switch
+} from 'perry-ui'
 export default {
   components: {
     Switch,

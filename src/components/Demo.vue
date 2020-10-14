@@ -60,6 +60,7 @@ $border-color: #d9d9d9;
 
 .demo {
   border: 1px solid $border-color;
+  border-radius: 8px;
   margin: 16px 0 32px;
 
   >h2 {
@@ -80,7 +81,6 @@ $border-color: #d9d9d9;
   &-code {
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
-    overflow-x: scroll;
 
     >pre {
       line-height: 1.1;

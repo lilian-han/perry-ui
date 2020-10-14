@@ -1,7 +1,9 @@
 <template>
-  <h1>Dialog 示例</h1>
-  <Demo :component="Dialog1Demo" />
-  <Demo :component="Dialog2Demo" />
+<h1>Dialog 示例</h1>
+<Demo :component="Dialog1Demo" />
+<Demo :component="Dialog2Demo" />
+<span>下一节：</span>
+<router-link to="/doc/tabs" style="color: #0366d6">Tabs 组件</router-link>
 </template>
 
 <script lang="ts">

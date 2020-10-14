@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { ref } from 'vue'
-import Switch from '../lib/Switch.vue'
+import { Switch } from 'perry-ui'
 export default {
   components: {
     Switch,

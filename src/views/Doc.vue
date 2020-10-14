@@ -1,5 +1,5 @@
 <template>
-<div class="layout" @click="x">
+<div class="layout">
   <Topnav class="nav" toggleMenuButtonVisible="true" />
   <div class="content">
     <aside v-if="asideVisible" class="aside">
@@ -31,7 +31,7 @@
         </li>
       </ol>
     </aside>
-    <main>
+    <main @click="x">
       <router-view />
     </main>
   </div>
@@ -49,11 +49,11 @@ export default {
     Topnav,
   },
   setup() {
+    const width = document.documentElement.clientWidth
     const asideVisible = inject < Ref < boolean >> ('asideVisible')
     const x = (event) => {
-      console.log(asideVisible.value)
-      if (asideVisible.value) {
-        // asideVisible.value = false
+      if (width <= 500) {
+        asideVisible.value = false
       }
     }
     return {
@@ -96,6 +96,7 @@ export default {
     flex-grow: 1;
     padding: 16px;
     background: white;
+    overflow: auto;
   }
 }
 
