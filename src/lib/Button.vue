@@ -1,6 +1,6 @@
 <template>
-  <button class="pear-button" :class="classes" :disabled="disabled">
-    <span class="pear-loadingIndicator" v-if="loading"></span>
+  <button class="perry-button" :class="classes" :disabled="disabled">
+    <span class="perry-loadingIndicator" v-if="loading"></span>
     <slot />
   </button>
 </template>
@@ -35,9 +35,9 @@ export default {
     const { theme, size, level } = props
     const classes = computed(() => {
       return {
-        [`pear-theme-${theme}`]: theme,
-        [`pear-size-${size}`]: size,
-        [`pear-level-${level}`]: level,
+        [`perry-theme-${theme}`]: theme,
+        [`perry-size-${size}`]: size,
+        [`perry-level-${level}`]: level,
       }
     })
     return {
@@ -56,7 +56,7 @@ $radius: 4px;
 $red: red;
 $grey: grey;
 
-.pear-button {
+.perry-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -90,7 +90,7 @@ $grey: grey;
     border: 0;
   }
 
-  &.pear-theme-link {
+  &.perry-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -101,7 +101,7 @@ $grey: grey;
     }
   }
 
-  &.pear-theme-text {
+  &.perry-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -112,20 +112,20 @@ $grey: grey;
     }
   }
 
-  &.pear-size-big {
+  &.perry-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
 
-  &.pear-size-small {
+  &.perry-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
 
-  &.pear-theme-button {
-    &.pear-level-main {
+  &.perry-theme-button {
+    &.perry-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -137,7 +137,7 @@ $grey: grey;
       }
     }
 
-    &.pear-level-danger {
+    &.perry-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -150,8 +150,8 @@ $grey: grey;
     }
   }
 
-  &.pear-theme-link {
-    &.pear-level-danger {
+  &.perry-theme-link {
+    &.perry-level-danger {
       color: $red;
 
       &:hover,
@@ -161,8 +161,8 @@ $grey: grey;
     }
   }
 
-  &.pear-theme-text {
-    &.pear-level-main {
+  &.perry-theme-text {
+    &.perry-level-main {
       color: $blue;
 
       &:hover,
@@ -171,7 +171,7 @@ $grey: grey;
       }
     }
 
-    &.pear-level-danger {
+    &.perry-level-danger {
       color: $red;
 
       &:hover,
@@ -181,7 +181,7 @@ $grey: grey;
     }
   }
 
-  &.pear-theme-button {
+  &.perry-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -192,15 +192,15 @@ $grey: grey;
     }
   }
 
-  &.pear-theme-link,
-  &.pear-theme-text {
+  &.perry-theme-link,
+  &.perry-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
 
-  > .pear-loadingIndicator {
+  > .perry-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -209,10 +209,10 @@ $grey: grey;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: pear-spin 1s infinite linear;
+    animation: perry-spin 1s infinite linear;
   }
 
-  @keyframes pear-spin {
+  @keyframes perry-spin {
     0% {
       transform: rotate(0deg);
     }

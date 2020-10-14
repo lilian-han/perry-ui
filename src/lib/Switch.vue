@@ -1,7 +1,7 @@
 <template>
   <button
-    class="pear-switch"
-    :class="{ 'pear-checked': value }"
+    class="perry-switch"
+    :class="{ 'perry-checked': value }"
     @click="toggle"
   >
     <span></span>
@@ -29,7 +29,7 @@ export default {
 $h: 22px;
 $h2: $h - 4px;
 
-.pear-switch {
+.perry-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -49,7 +49,7 @@ $h2: $h - 4px;
     transition: 0.25s;
   }
 
-  &.pear-checked {
+  &.perry-checked {
     background: #1890ff;
 
     > span {
@@ -67,7 +67,7 @@ $h2: $h - 4px;
     }
   }
 
-  &.pear-checked:active {
+  &.perry-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;

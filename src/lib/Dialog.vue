@@ -1,12 +1,12 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-      <div class="pear-dialog-overlay" @click="onClickOverlay"></div>
-      <div class="pear-dialog-wrapper">
-        <div class="pear-dialog">
+      <div class="perry-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="perry-dialog-wrapper">
+        <div class="-dialog">
           <header>
             <slot name="title"></slot
-            ><span @click="close" class="pear-dialog-close"></span>
+            ><span @click="close" class="perry-dialog-close"></span>
           </header>
           <main>
             <slot name="content"></slot>
@@ -76,7 +76,7 @@ export default {
 $radius: 4px;
 $border-color: #d9d9d9;
 
-.pear-dialog {
+.perry-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);

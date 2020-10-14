@@ -1,8 +1,8 @@
 <template>
-  <div class="pear-tabs">
-    <div class="pear-tabs-nav" ref="container">
+  <div class="perry-tabs">
+    <div class="perry-tabs-nav" ref="container">
       <div
-        class="pear-tabs-nav-item"
+        class="perry-tabs-nav-item"
         :ref="
           (el) => {
             if (t === selected) selectedItem = el
@@ -15,11 +15,11 @@
       >
         {{ t }}
       </div>
-      <div class="pear-tabs-nav-indicator" ref="indicator"></div>
+      <div class="perry-tabs-nav-indicator" ref="indicator"></div>
     </div>
-    <div class="pear-tabs-content">
+    <div class="perry-tabs-content">
       <component
-        class="pear-tabs-content-item"
+        class="perry-tabs-content-item"
         :is="current"
         :key="current.props.title"
       />
@@ -86,7 +86,7 @@ $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
 
-.pear-tabs {
+.perry-tabs {
   &-nav {
     display: flex;
     color: $color;
