@@ -1,48 +1,48 @@
 <template>
-<div class="home-page">
-  <div class="topnavAndBanner">
-    <Topnav></Topnav>
-    <div class="banner">
-      <svg>
-        <use xlink:href="#icon-perry"></use>
-      </svg>
-      <h1>梨 UI</h1>
-      <h2>一个平平无奇，普普通通的 UI 框架</h2>
-      <p class="actions">
-        <a href="https://github.com/lilian-han/perry-ui">GitHub</a>
-        <router-link to="/doc">开始</router-link>
-      </p>
+  <div class="home-page">
+    <div class="topnavAndBanner">
+      <Topnav></Topnav>
+      <div class="banner">
+        <svg>
+          <use xlink:href="#icon-logo"></use>
+        </svg>
+        <h1>梨 UI</h1>
+        <h2>一个平平无奇，普普通通的 UI 框架</h2>
+        <p class="actions">
+          <a href="https://github.com/lilian-han/perry-ui">GitHub</a>
+          <router-link to="/doc">开始</router-link>
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="hr"></div>
+      <div class="features">
+        <ul>
+          <li>
+            <svg class="icon">
+              <use xlink:href="#icon-vue"></use>
+            </svg>
+            <h3>基于 Vue 3</h3>
+            <p>骄傲的使用了 Vue 3 Composition API</p>
+          </li>
+          <li>
+            <svg class="icon">
+              <use xlink:href="#icon-ts"></use>
+            </svg>
+            <h3>基于 TypeScript</h3>
+            <p>源代码采用 TypeScript 书写</p>
+          </li>
+          <li>
+            <svg class="icon">
+              <use xlink:href="#icon-idea"></use>
+            </svg>
+            <h3>代码易读</h3>
+            <p>每个组件的源代码都及其简洁</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="footer">
-    <div class="hr"></div>
-    <div class="features">
-      <ul>
-        <li>
-          <svg class="icon">
-            <use xlink:href="#icon-vue"></use>
-          </svg>
-          <h3>基于 Vue 3</h3>
-          <p>骄傲的使用了 Vue 3 Composition API</p>
-        </li>
-        <li>
-          <svg class="icon">
-            <use xlink:href="#icon-ts"></use>
-          </svg>
-          <h3>基于 TypeScript</h3>
-          <p>源代码采用 TypeScript 书写</p>
-        </li>
-        <li>
-          <svg class="icon">
-            <use xlink:href="#icon-idea"></use>
-          </svg>
-          <h3>代码易读</h3>
-          <p>每个组件的源代码都及其简洁</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 </template>
 
 <script lang="ts">
@@ -71,11 +71,11 @@ $color: #007974;
   align-items: center;
   flex-direction: column;
 
-  >svg {
+  > svg {
     margin-bottom: 50px;
   }
 
-  >.actions {
+  > .actions {
     padding: 8px 0;
 
     a {
@@ -116,8 +116,8 @@ $color: #007974;
     width: 100%;
     height: 450px;
 
-    >ul {
-      >li {
+    > ul {
+      > li {
         width: 100%;
       }
     }
@@ -126,37 +126,37 @@ $color: #007974;
     @media (min-width: 1200px) {
       height: 260px;
 
-      >ul {
+      > ul {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         height: 260px;
 
-        >li {
+        > li {
           width: 33.3333%;
         }
       }
     }
 
-    >ul {
-      >li {
+    > ul {
+      > li {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 150px;
 
-        >svg {
+        > svg {
           width: 104px;
           height: 104px;
           position: absolute;
           z-index: 1;
         }
 
-        >h3 {
+        > h3 {
           font-size: 28px;
         }
 
-        >h3,
+        > h3,
         p {
           z-index: 2;
           display: block;

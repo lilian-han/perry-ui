@@ -1,34 +1,28 @@
 <template>
-  <div class="perry-tabs">
-    <div class="perry-tabs-nav" ref="container">
-      <div
-        class="perry-tabs-nav-item"
-        :ref="
+<div class="perry-tabs">
+  <div class="perry-tabs-nav" ref="container">
+    <div class="perry-tabs-nav-item" :ref="
           (el) => {
             if (t === selected) selectedItem = el
           }
-        "
-        @click="select(t)"
-        :class="{ selected: t === selected }"
-        v-for="(t, index) in titles"
-        :key="index"
-      >
-        {{ t }}
-      </div>
-      <div class="perry-tabs-nav-indicator" ref="indicator"></div>
+        " @click="select(t)" :class="{ selected: t === selected }" v-for="(t, index) in titles" :key="index">
+      {{ t }}
     </div>
-    <div class="perry-tabs-content">
-      <component
-        class="perry-tabs-content-item"
-        :is="current"
-        :key="current.props.title"
-      />
-    </div>
+    <div class="perry-tabs-nav-indicator" ref="indicator"></div>
   </div>
+  <div class="perry-tabs-content">
+    <component class="perry-tabs-content-item" :is="current" :key="current.props.title" />
+  </div>
+</div>
 </template>
 
 <script lang="ts">
-import { computed, onMounted, ref, watchEffect } from 'vue'
+import {
+  computed,
+  onMounted,
+  ref,
+  watchEffect
+} from 'vue'
 import Tab from './Tab.vue'
 export default {
   props: {
@@ -37,18 +31,28 @@ export default {
     },
   },
   setup(props, context) {
-    const selectedItem = ref<HTMLDivElement>(null)
-    const indicator = ref<HTMLDivElement>(null)
-    const container = ref<HTMLDivElement>(null)
+    const selectedItem = ref < HTMLDivElement > (null)
+    const indicator = ref < HTMLDivElement > (null)
+    const container = ref < HTMLDivElement > (null)
     onMounted(() => {
-      watchEffect(() => {
-        const { width } = selectedItem.value.getBoundingClientRect()
-        indicator.value.style.width = width + 'px'
-        const { left: left1 } = container.value.getBoundingClientRect()
-        const { left: left2 } = selectedItem.value.getBoundingClientRect()
-        const left = left2 - left1
-        indicator.value.style.left = left + 'px'
-      })
+      watchEffect(
+        () => {
+          const {
+            width
+          } = selectedItem.value.getBoundingClientRect()
+          indicator.value.style.width = width + 'px'
+          const {
+            left: left1
+          } = container.value.getBoundingClientRect()
+          const {
+            left: left2
+          } = selectedItem.value.getBoundingClientRect()
+          const left = left2 - left1
+          indicator.value.style.left = left + 'px'
+        }, {
+          flush: 'post'
+        }
+      )
     })
     const defaults = context.slots.default()
     defaults.forEach((tag) => {
