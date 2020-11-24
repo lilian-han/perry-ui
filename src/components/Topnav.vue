@@ -1,5 +1,5 @@
 <template>
-<div class="topnav">
+<div class="topnav whiteBG">
   <router-link to="/" class="logo">
     <svg class="icon">
       <use xlink:href="#icon-logo"></use>
@@ -44,10 +44,11 @@ export default {
 $color: #2d2438;
 
 .topnav {
+  // background: red;
   color: $color;
   display: flex;
   padding: 16px;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -100,4 +101,6 @@ $color: #2d2438;
     }
   }
 }
+
+.whiteBG {}
 </style>
